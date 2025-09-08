@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PaginaPrincipal.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Level-UP</h1>
+    <br>
+
+    <!-- menú -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- abrir/cerrar el menú -->
+    <label for="menu-toggle" class="buttonM">☰ Menu</label>
+
+    <!-- Menú lateral -->
+    <nav class="menu">
+        <a href="inicio.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- Login -->
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="inicio.html" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <form action="registro.html" method="get">
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
