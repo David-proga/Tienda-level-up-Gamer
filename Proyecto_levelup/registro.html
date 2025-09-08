@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Crear Cuenta</h2>
+    <form id="inicioForm" action="inicio.html" method="post">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <span id="errorNombre" style="color:red;"></span>
+        <br><br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <span id="errorEmail" style="color:red;"></span>
+        <br><br>
+
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <buttonM type="submit">Crear cuenta</buttonM>
+    </form>
+
+<script>
+    // rellana si hay datos en el local
+    window.onload = function() {
+        if (localStorage.getItem('nombre')) {
+            document.getElementById('nombre').value = localStorage.getItem('nombre');
+        }
+        if (localStorage.getItem('correo')) {
+            document.getElementById('correo').value = localStorage.getItem('correo');
+        }
+    };
+
+    // }formulario
+    document.getElementById('registroForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // no recarga pag
+
+        var nombre = document.getElementById("nombre").value.trim();
+        var correo = document.getElementById("correo").value.trim();
+        var errorNombre = document.getElementById("errorNombre");
+        var errorEmail = document.getElementById("errorEmail");
+        var validado = true;
+
+        if (nombre === "") {
+            errorNombre.textContent = "Por favor, introduzca su nombre";
+            validado = false;
+        } else {
+            errorNombre.textContent = "";
+        }
+
+        if (correo === "") {
+            errorEmail.textContent = "Por favor, introduzca su correo";
+            validado = false;
+        } else {
+            errorEmail.textContent = "";
+        }
+
+        if (validado) {
+            // guarda datos en el local
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('correo', correo);
+
+            alert("✅ Formulario enviado y datos guardados en localStorage");
+           
+        }
+    });
+</script>
+</body>
+</html>
