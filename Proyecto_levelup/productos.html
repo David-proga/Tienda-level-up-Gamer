@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="tiendaGamer.css">
+    <link rel="stylesheet" href="css/PaginaPrincipal.css">
+</head>
+<body>
+    <h1>Productos</h1>
+
+    <!-- PC armados -->
+    <h1>PCs Gamer Armados</h2>
+    <table>
+        <tr class="pr">
+            <th>Producto</th>
+            <th>Especificaciones</th>
+            <th>Precio</th>
+        </tr>
+        <tr class="presp">
+            <td>PC Gamer AMD Ryzen 7 8700G</td>
+            <td>32GB RAM DDR5, 500GB NVMe 4.0</td>
+            <td>$1.200.000 CLP</td>
+        </tr>
+        <tr class="presp2">
+            <td>PC Intel Core i7 RTX 4070</td>
+            <td>16GB RAM, 1TB SSD</td>
+            <td>$1.500.000 CLP</td>
+        </tr>
+    </table>
+
+    
+    <h1>Monitores Gamer</h2>
+    <table>
+        <tr class="presp3">
+            <th>Modelo</th>
+            <th>Tamaño</th>
+            <th>Resolución</th>
+            <th>Precio</th>
+        </tr>
+        <tr class="presp5">
+            <td>Xiaomi G24i</td>
+            <td>24"</td>
+            <td>Full HD 1920×1080</td>
+            <td>$150.000 CLP</td>
+        </tr>
+        <tr class="presp5">
+            <td>ASUS TUF VG27AQ</td>
+            <td>27"</td>
+            <td>QHD 165Hz</td>
+            <td>$320.000 CLP</td>
+        </tr>
+    </table>
+    <h1>Periféricos</h2>
+    <table>
+        <tr class="presp6">
+            <th>Tipo</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+        </tr>
+        <tr class="presp7">
+            <td>Mouse</td>
+            <td>Razer Viper V3 Hyperspeed</td>
+            <td>$89.990 CLP</td>
+        </tr>
+        <tr class="presp8">
+            <td>Mouse</td>
+            <td>Logitech G502 HERO</td>
+            <td>$49.990 CLP</td>
+        </tr>
+        <tr class="presp9">
+            <td>Teclado</td>
+            <td>Redragon Dragonborn K630RGB</td>
+            <td>$29.900 CLP</td>
+        </tr>
+        <tr class="presp10">
+            <td>Teclado</td>
+            <td>Logitech Signature K650 Wireless</td>
+            <td>$39.990 CLP</td>
+        </tr>
+        <tr class="presp11">
+            <td>Audífonos</td>
+            <td>HyperX Cloud II</td>
+            <td>$69.990 CLP</td>
+        </tr>
+        <tr class="presp12">
+            <td>Audífonos</td>
+            <td>Logitech G733 Wireless</td>
+            <td>$99.990 CLP</td>
+        </tr>
+    </table>
+
+
+    <h1>Sillas Gamer</h2>
+    <table>
+        <tr class="presp13">
+            <th>Modelo</th>
+            <th>Características</th>
+            <th>Precio</th>
+        </tr>
+        <tr class="presp14">
+            <td>Cougar Armor Titan Pro</td>
+            <td>Ergonómica, cuero sintético</td>
+            <td>$489.000 CLP</td>
+        </tr>
+    </table>
+    <!-- menú -->
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="buttonM"> ⁝ </label>
+
+    <nav class="menu" id="menu">
+        <a href="inicio.html">Inicio</a>
+        <a href="login.html">Iniciar Sesión</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener("click", function(e) {
+            if (toggle.checked && !menu.contains(e.target) && e.target !== toggle && e.target.tagName !== "LABEL") {
+                toggle.checked = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

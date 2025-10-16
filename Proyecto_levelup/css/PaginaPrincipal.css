@@ -1,0 +1,220 @@
+body{
+    background-color: black;
+}
+h1{/*titulo*/
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    color:white;
+    font-size: 20px;
+}
+
+p.p1{ /* parrafo 1*/
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    color:rgb(255, 255, 255) ;
+}
+p.p2{ /*texto mision*/
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    color: rgb(255, 255, 255);
+}
+p.p3{/*vision*/
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    color: rgb(255, 255, 255);
+}
+p.p4{/*texto vision*/
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    color:rgb(255, 255, 255);
+}
+ul.section-nav{
+    display: flex;  
+    justify-content: flex-end;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+    
+}
+button.bntIni{
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+button.btnRegInis{
+    color: black;
+    background-color: white;
+    padding:10px;
+}
+button.btnContacto{
+    color: black;
+    background-color: white;
+    padding:10px;
+}
+
+.login-container {
+  margin: 100px auto;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #099901;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #575757;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: center;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color:green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilo del botón */
+.menu-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: #111;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Botón del menú */
+.buttonM {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  background: #111;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Menú lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* oculto inicialmente */
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background: #575757;
+}
+
+/* mostrar menu cuando se activa el checkbox */
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+/* cambiar color del botón al abrir */
+#menu-toggle:checked + .buttonM {
+  background: #575757;
+}
+
+/*cerrar boton*/
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background: #111;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+tr.presp1, tr.presp2, tr.presp3, tr.presp4, tr.presp5, tr.presp6, tr.presp7, tr.presp8, tr.presp9, tr.presp10, tr.presp11, tr.presp12, tr.presp13, tr.presp14 {
+  color: #ffffff; 
+  text-align: center;
+  align-items: center;
+  display: table-row;
+}

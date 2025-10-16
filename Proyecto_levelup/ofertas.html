@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ofertas Gamer </title>
+  
+
+<link rel="stylesheet" href="css/ofertas.css">
+</head>
+<body>
+
+  <h1>Ofertas Gamer de la Semana</h1>
+
+  <div class="oferta">
+    <h2>Teclado Mecánico RGB</h2>
+    <p>Switches rojos, retroiluminación personalizable.</p>
+    <p class="precio">Precio: $39.990</p>
+    <button class="boton">Agregar al carrito</button>
+  </div>
+
+  <div class="oferta">
+    <h2>Mouse Gamer 7200 DPI</h2>
+    <p>Diseño ergonómico, 6 botones programables.</p>
+    <p class="precio">Precio: $24.990</p>
+    <button class="boton">Agregar al carrito</button>
+  </div>
+
+  <div class="oferta">
+    <h2>Audífonos con sonido envolvente 7.1</h2>
+    <p>Micrófono retráctil, almohadillas cómodas.</p>
+    <p class="precio">Precio: $49.990</p>
+    <button class="boton">Agregar al carrito</button>
+  </div>
+
+  <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener("click", function(e) {
+            if (toggle.checked && !menu.contains(e.target) && e.target !== toggle && e.target.tagName !== "LABEL") {
+                toggle.checked = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

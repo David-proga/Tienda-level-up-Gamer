@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="css/registro.css">
+    
     <title>Registro</title>
 </head>
 <body>
@@ -25,11 +26,11 @@
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required><br><br>
 
-        <buttonM type="submit">Crear cuenta</buttonM>
+        <button type="submit">Crear cuenta</button>
     </form>
 
 <script>
-    // rellana si hay datos en el local
+    // Rellena si hay datos en el localStorage
     window.onload = function() {
         if (localStorage.getItem('nombre')) {
             document.getElementById('nombre').value = localStorage.getItem('nombre');
@@ -39,9 +40,9 @@
         }
     };
 
-    // }formulario
-    document.getElementById('registroForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // no recarga pag
+    // Validación y envío del formulario
+    document.getElementById('inicioForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Evita recargar la página
 
         var nombre = document.getElementById("nombre").value.trim();
         var correo = document.getElementById("correo").value.trim();
@@ -64,12 +65,14 @@
         }
 
         if (validado) {
-            // guarda datos en el local
+            // Guarda datos en el localStorage
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('correo', correo);
 
             alert("✅ Formulario enviado y datos guardados en localStorage");
-           
+
+            // Redirige al archivo de inicio
+            window.location.href = "inicio.html";
         }
     });
 </script>

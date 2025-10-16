@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="PaginaPrincipal.css">
+    <link rel="stylesheet" href="css/registro.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Level-UP</h1>
     <br>
 
-    <!-- menú -->
     <input type="checkbox" id="menu-toggle">
 
-    <!-- abrir/cerrar el menú -->
-    <label for="menu-toggle" class="buttonM">☰ Menu</label>
+    <label for="menu-toggle" class="buttonM"> ⁝ </label>
 
-    <!-- Menú lateral -->
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="inicio.html">Inicio</a>
         <a href="productos.html">Productos</a>
         <a href="ofertas.html">Ofertas</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    <!-- Login -->
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         <form action="inicio.html" method="post">
@@ -41,5 +37,17 @@
             <button type="submit">Registrarse</button>
         </form>
     </div>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener("click", function(e) {
+            if (toggle.checked && !menu.contains(e.target) && e.target !== toggle && e.target.tagName !== "LABEL") {
+                toggle.checked = false;
+            }
+        });
+    </script>
 </body>
 </html>

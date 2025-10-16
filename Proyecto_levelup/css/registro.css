@@ -1,0 +1,126 @@
+/* Fondo general */
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+/* Contenedor del login y registro */
+.login-container {
+  margin: 100px auto;
+  width: 320px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f4f4f4;
+  color: black;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* Encabezado dentro de login/registro */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Labels e inputs */
+.login-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="password"] {
+  width: 25%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Botones */
+.login-container button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-container button:hover {
+  background: #575757;
+}
+
+/* Menú lateral */
+#menu-toggle {
+  display: none;
+}
+
+.buttonM {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  background: #111;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background: #575757;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+#menu-toggle:checked + .buttonM {
+  background: #575757;
+}
